@@ -4,3 +4,8 @@
   import_tasks: yum_install.yml
   tags:
     - moto_install
+
+- name: Moto | MySQL Installation
+  import_tasks: mysql_install.yml
+  tags:
+    - moto_mysql
