@@ -9,16 +9,22 @@
     mode: 0755
 
 - name: Moto | Go to the sbin folder and execute command
-  command: cd /usr/local/sbin
+  command: ln -s MotoPoll.pl MOTO_POLL
+  args:
+    chdir: /usr/local/sbin 
+  
+- name: Moto | Go to the sbin folder and execute command
+  command: ls -lrtah
+  args:
+    chdir: /usr/local/sbin
 
-- name: Moto | Create Symbolink MOTO_POLL
-  shell: cd /usr/local/sbin
-  file:
-    src: MotoPoll.pl
-    dest: MOTO_POLL
-    owner: root
-    group: root
-    state: link
+# - name: Moto | Create Symbolink MOTO_POLL
+#   file:
+#     src: MotoPoll.pl
+#     dest: MOTO_POLL
+#     owner: root
+#     group: root
+#     state: link
 
 - name: Moto | Check MOTO_POLL Command
   command: "{{ item }}"
