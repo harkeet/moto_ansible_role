@@ -9,6 +9,9 @@
     mode: 0755
 
 - name: Moto | Go to the sbin folder and execute command
+  command: dos2unix /usr/local/sbin/MotoPoll.pl
+
+- name: Moto | Go to the sbin folder and execute command
   command: ln -s MotoPoll.pl MOTO_POLL
   args:
     chdir: /usr/local/sbin 

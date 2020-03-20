@@ -27,7 +27,7 @@
 #		v 5.4	11/25/2014	Ulysses Cruz	Allow short notes to be assigned to each device entry, which will be included in any trap sent for that device.
 #		v 5.5	12/1/2014	Ulysses Cruz	Corrected bugs with new database creation related to the new config versioning code.
 #
-# ï¿½2012 Ulysses Cruz, Motorola Solutions Inc.
+# ©2012 Ulysses Cruz, Motorola Solutions Inc.
 ###############################################################################
 my $version  = '5.4';
 
@@ -60,9 +60,9 @@ my $device_total :shared = 0;
 my $switch_total :shared = 0;
 my $ap_total :shared = 0;
 my $global_thread_limit = int(`cat /proc/sys/kernel/threads-max` / 256);
-my $mysql_host = 'mysql_container';
+my $mysql_host = 'localhost';
 my $mysql_user = 'root';
-my $mysql_pass = 'motoroot';
+my $mysql_pass = '';
 
 # Create control queues
 my $device_known = Thread::Queue->new();
