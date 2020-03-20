@@ -1,0 +1,19 @@
+---
+
+- name: MySQL | Install MySQL Repo
+    yum:
+      state: latest
+      name:
+        - http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+
+- name: YUM | Update the Hub server
+    yum:
+      name: "*"
+      state: latest
+
+- name: MySQL | Install MySQL Server 
+    yum:
+      state: latest
+      name:
+        - mysql-server
+        - mysql-client

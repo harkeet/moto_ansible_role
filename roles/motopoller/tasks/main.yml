@@ -1,0 +1,6 @@
+---
+
+- name: Moto | YUM Install
+  import_tasks: yum_install.yml
+  tags:
+    - moto_install
