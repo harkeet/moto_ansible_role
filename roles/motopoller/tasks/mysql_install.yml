@@ -15,7 +15,6 @@
   yum:
     state: latest
     name:
-      - libmysqlclient-dev
       - python-mysqldb 
       - mysql-server
       - mysql-client
