@@ -1,0 +1,5 @@
+motopoller ansible_connection=local
+
+[uim_hubs]
+hub01      ansible_host=192.168.30.101
+hub02      ansible_host=192.168.30.102

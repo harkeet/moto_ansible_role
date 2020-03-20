@@ -1,8 +1,8 @@
 ---
 
-- hosts: kafka
+- hosts: motopoller
   become: yes
   become_user: root
   become_method: sudo
   roles:
-    - role: kafka
+    - role: motopoller

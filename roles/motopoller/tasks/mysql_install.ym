@@ -15,5 +15,18 @@
     yum:
       state: latest
       name:
+        - libmysqlclient-dev
+        - python-mysqldb 
         - mysql-server
         - mysql-client
+
+- name: MySQL | Make sure a service is running
+  systemd:
+    state: started
+    name: mysqld
+    daemon_reload: yes
+    enabled: yes
+
+- name: Collect all possible information using passwordless root access
+  mysql_info:
+    login_user: root
