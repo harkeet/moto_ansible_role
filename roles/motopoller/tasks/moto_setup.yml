@@ -12,6 +12,7 @@
   command: chdir=/usr/local/sbin ls -lrtah
 
 - name: Moto | Create Symbolink MOTO_POLL
+  command: cd /usr/local/sbin
   file:
     src: MotoPoll.pl
     dest: MOTO_POLL
