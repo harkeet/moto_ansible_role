@@ -9,3 +9,8 @@
   import_tasks: mysql_install.yml
   tags:
     - moto_mysql
+
+- name: Moto | MotPoller Setup
+  import_tasks: moto_setup.yml
+  tags:
+    - moto_setup

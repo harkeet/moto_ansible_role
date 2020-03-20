@@ -1,0 +1,26 @@
+---
+
+- name: Moto | Copy MotoPoller Perl Script
+  copy:
+    src: MotoPoll.pl
+    dest: /usr/local/sbin
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Moto | Go to the sbin folder and execute command
+  command: chdir=/usr/local/sbin ls -lrtah
+
+- name: Moto | Create Symbolink MOTO_POLL
+  file:
+    src: MotoPoll.pl
+    dest: MOTO_POLL
+    owner: root
+    group: root
+    state: link
+
+- name: Moto | Check MOTO_POLL Command
+  command: "{{ item }}"
+  loop:
+    - 'MOTO_POLL –customer DJONES'
+    - 'MOTO_POLL –status poller'

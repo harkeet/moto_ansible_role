@@ -34,3 +34,6 @@
 - name: Collect all possible information using passwordless root access
   mysql_info:
     login_user: root
+    filter:
+    - databases
+    - version
