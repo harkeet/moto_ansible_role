@@ -1,35 +1,35 @@
 ---
 
 - name: YUM | Update the Hub server
-    yum:
-      name: "*"
-      state: latest
+  yum:
+    name: "*"
+    state: latest
 
-- name: YUM | Install a list of required packages
-    yum:
-      state: latest
-      name:
-        - perl
-        - gcc
-        - perl-core
-        - net-snmp
-        - net-snmp-utils
-        - wget
-        - cpanminus
-        - perl-DBD-MySQL
-        - perl-Net-SNMP
-        - dos2unix
+- name: YUM - Install a list of required packages
+  yum:
+    state: latest
+    name:
+      - perl
+      - gcc
+      - perl-core
+      - net-snmp
+      - net-snmp-utils
+      - wget
+      - cpanminus
+      - perl-DBD-MySQL
+      - perl-Net-SNMP
+      - dos2unix
 
 - name: YUM | Install Perl CPANM Modules required by MotoPoller
-    cpanm:
-      name:
-        - CPAN::Meta
-        - Net::SNMP
-        - POSIX
-        - strict
-        - threads
-        - Thread::Queue
-        - Thread::Semaphore
-        - threads::shared
-        - warnings
-        - Fcntl
+  cpanm:
+    name:
+      - CPAN::Meta
+      - Net::SNMP
+      - POSIX
+      - strict
+      - threads
+      - Thread::Queue
+      - Thread::Semaphore
+      - threads::shared
+      - warnings
+      - Fcntl
