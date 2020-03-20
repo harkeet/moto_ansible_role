@@ -1,24 +1,24 @@
 ---
 
 - name: MySQL | Install MySQL Repo
-    yum:
-      state: latest
-      name:
-        - http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+  yum:
+    state: latest
+    name:
+      - http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 
 - name: YUM | Update the Hub server
-    yum:
-      name: "*"
-      state: latest
+  yum:
+    name: "*"
+    state: latest
 
 - name: MySQL | Install MySQL Server 
-    yum:
-      state: latest
-      name:
-        - libmysqlclient-dev
-        - python-mysqldb 
-        - mysql-server
-        - mysql-client
+  yum:
+    state: latest
+    name:
+      - libmysqlclient-dev
+      - python-mysqldb 
+      - mysql-server
+      - mysql-client
 
 - name: MySQL | Make sure a service is running
   systemd:
