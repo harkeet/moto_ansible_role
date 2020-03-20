@@ -17,7 +17,7 @@
       - wget
       - cpanminus
       - perl-DBD-MySQL
-      #- perl-Net-SNMP
+      - perl-Net-SNMP
       - dos2unix
 
 
