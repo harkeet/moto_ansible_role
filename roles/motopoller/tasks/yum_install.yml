@@ -17,7 +17,7 @@
       - wget
       - cpanminus
       - perl-DBD-MySQL
-      - perl-Net-SNMP
+      #- perl-Net-SNMP
       - dos2unix
 
 - name: YUM | Install Perl CPANM Modules required by MotoPoller
@@ -25,6 +25,8 @@
     name:
       - CPAN::Meta
       - Net::SNMP
+      - SNMP
+      - Socket
       - POSIX
       - strict
       - threads
