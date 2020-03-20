@@ -15,9 +15,15 @@
   yum:
     state: latest
     name:
-      - python-mysqldb 
+      - python-pip
+      - python-setuptools
+      - python-wheel 
       - mysql-server
       - mysql-client
+
+- name: MYSQL | Ansible module pip req
+  pip:
+    name: pymysql
 
 - name: MySQL | Make sure a service is running
   systemd:
