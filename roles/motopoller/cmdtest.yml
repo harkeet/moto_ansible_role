@@ -1,0 +1,10 @@
+- hosts: motopoller
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: Moto | Check MOTO_POLL Command
+      command: MOTO_POLL –"{{ item }}"
+      loop:
+        - 'customer DJONES'
+        - 'status poller'

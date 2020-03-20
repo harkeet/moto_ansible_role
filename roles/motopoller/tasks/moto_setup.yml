@@ -30,7 +30,7 @@
 #     state: link
 
 - name: Moto | Check MOTO_POLL Command
-  command: "{{ item }}"
+  command: MOTO_POLL –"{{ item }}"
   loop:
-    - 'MOTO_POLL –customer DJONES'
-    - 'MOTO_POLL –status poller'
+    - 'customer DJONES'
+    - 'status poller'
