@@ -9,10 +9,9 @@
     mode: 0755
 
 - name: Moto | Go to the sbin folder and execute command
-  command: chdir=/usr/local/sbin ls -lrtah
+  command: cd /usr/local/sbin
 
 - name: Moto | Create Symbolink MOTO_POLL
-  command: cd /usr/local/sbin
   file:
     src: MotoPoll.pl
     dest: MOTO_POLL
