@@ -27,7 +27,6 @@
   loop:
     - CPAN::Meta
     - Net::SNMP
-    - SNMP
     - Socket
     - POSIX
     - strict
