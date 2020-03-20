@@ -12,6 +12,7 @@
   command: cd /usr/local/sbin
 
 - name: Moto | Create Symbolink MOTO_POLL
+  shell: cd /usr/local/sbin
   file:
     src: MotoPoll.pl
     dest: MOTO_POLL
