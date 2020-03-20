@@ -19,7 +19,6 @@
       - python-setuptools
       - python-wheel 
       - mysql-server
-      - mysql-client
 
 - name: MYSQL | Ansible module pip req
   pip:
